@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		FA98B9E91F72385A00671D7E /* Rendezvous.h in Headers */ = {isa = PBXBuildFile; fileRef = FA98B9E71F72385A00671D7E /* Rendezvous.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA98BA441F723A6A00671D7E /* SearchableMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA98BA431F723A6A00671D7E /* SearchableMapView.swift */; };
+		FA98BA471F723A9F00671D7E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA98BA461F723A9F00671D7E /* MapKit.framework */; };
+		FA98BA491F723C3F00671D7E /* PreviewableMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA98BA481F723C3F00671D7E /* PreviewableMapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FA98B9E41F72385A00671D7E /* Rendezvous.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Rendezvous.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA98B9E71F72385A00671D7E /* Rendezvous.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rendezvous.h; sourceTree = "<group>"; };
 		FA98B9E81F72385A00671D7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA98BA431F723A6A00671D7E /* SearchableMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchableMapView.swift; sourceTree = "<group>"; };
+		FA98BA461F723A9F00671D7E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		FA98BA481F723C3F00671D7E /* PreviewableMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewableMapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA98BA471F723A9F00671D7E /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32,6 +39,7 @@
 			children = (
 				FA98B9E61F72385A00671D7E /* Rendezvous */,
 				FA98B9E51F72385A00671D7E /* Products */,
+				FA98BA451F723A9F00671D7E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -46,10 +54,20 @@
 		FA98B9E61F72385A00671D7E /* Rendezvous */ = {
 			isa = PBXGroup;
 			children = (
-				FA98B9E71F72385A00671D7E /* Rendezvous.h */,
 				FA98B9E81F72385A00671D7E /* Info.plist */,
+				FA98B9E71F72385A00671D7E /* Rendezvous.h */,
+				FA98BA431F723A6A00671D7E /* SearchableMapView.swift */,
+				FA98BA481F723C3F00671D7E /* PreviewableMapView.swift */,
 			);
 			path = Rendezvous;
+			sourceTree = "<group>";
+		};
+		FA98BA451F723A9F00671D7E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA98BA461F723A9F00671D7E /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +113,7 @@
 				TargetAttributes = {
 					FA98B9E31F72385A00671D7E = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -131,6 +150,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA98BA491F723C3F00671D7E /* PreviewableMapView.swift in Sources */,
+				FA98BA441F723A6A00671D7E /* SearchableMapView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +274,7 @@
 		FA98B9ED1F72385A00671D7E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -266,6 +288,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.fumikoi.Rendezvous;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -274,6 +297,7 @@
 		FA98B9EE1F72385A00671D7E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
