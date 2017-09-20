@@ -12,12 +12,21 @@ import MapKit
 
 public class SearchableMapView: MKMapView {
 
+    public var centerLocation: CLLocation {
+        return CLLocation(latitude: self.centerCoordinate.latitude, longitude: self.centerCoordinate.longitude)
+    }
+
     public override init(frame: CGRect) {
         super.init(frame: frame)
+    }
 
-        let view: UIView = UIView(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
-        view.backgroundColor = UIColor.red
-        self.addSubview(view)
+    public init(frame: CGRect,
+                centerCoordinate: CLLocationCoordinate2D,
+                span: MKCoordinateSpan) {
+        super.init(frame: frame)
+
+        let region = MKCoordinateRegionMake(centerCoordinate, span)
+        self.region = region
     }
 
     required public init?(coder aDecoder: NSCoder) {

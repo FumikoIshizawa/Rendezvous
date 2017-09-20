@@ -11,6 +11,8 @@
 		FA98BA441F723A6A00671D7E /* SearchableMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA98BA431F723A6A00671D7E /* SearchableMapView.swift */; };
 		FA98BA471F723A9F00671D7E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA98BA461F723A9F00671D7E /* MapKit.framework */; };
 		FA98BA491F723C3F00671D7E /* PreviewableMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA98BA481F723C3F00671D7E /* PreviewableMapView.swift */; };
+		FA98BA511F726B0A00671D7E /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA98BA501F726B0A00671D7E /* CircleView.swift */; };
+		FA98BA531F72707500671D7E /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA98BA521F72707500671D7E /* Pin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		FA98BA431F723A6A00671D7E /* SearchableMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchableMapView.swift; sourceTree = "<group>"; };
 		FA98BA461F723A9F00671D7E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		FA98BA481F723C3F00671D7E /* PreviewableMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewableMapView.swift; sourceTree = "<group>"; };
+		FA98BA501F726B0A00671D7E /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		FA98BA521F72707500671D7E /* Pin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 				FA98B9E71F72385A00671D7E /* Rendezvous.h */,
 				FA98BA431F723A6A00671D7E /* SearchableMapView.swift */,
 				FA98BA481F723C3F00671D7E /* PreviewableMapView.swift */,
+				FA98BA501F726B0A00671D7E /* CircleView.swift */,
+				FA98BA521F72707500671D7E /* Pin.swift */,
 			);
 			path = Rendezvous;
 			sourceTree = "<group>";
@@ -150,8 +156,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA98BA511F726B0A00671D7E /* CircleView.swift in Sources */,
 				FA98BA491F723C3F00671D7E /* PreviewableMapView.swift in Sources */,
 				FA98BA441F723A6A00671D7E /* SearchableMapView.swift in Sources */,
+				FA98BA531F72707500671D7E /* Pin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
