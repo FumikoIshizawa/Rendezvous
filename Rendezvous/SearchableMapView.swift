@@ -36,10 +36,10 @@ public class SearchableMapView: MKMapView {
         }
     }
 
-    private var pin: Pin?
+    internal var pin: Pin?
     private var span: MKCoordinateSpan = MKCoordinateSpanMake(0.01, 0.01)
-    private var defaultCenterViewLength: Double = 1.0
-    private var defaultSpan: Double = 0.01
+    internal var defaultCenterViewLength: Double = 1.0
+    internal var defaultSpan: Double = 0.01
 
     public init(frame: CGRect,
                 centerCoordinate: CLLocationCoordinate2D,
@@ -54,7 +54,7 @@ public class SearchableMapView: MKMapView {
 
         switch pinType {
         case .circle(let radius):
-            pin = CircleView(
+            self.pin = CircleView(
                 radius: radius,
                 center: CGPoint(x: self.frame.width / 2, y: self.frame.height / 2)
             )

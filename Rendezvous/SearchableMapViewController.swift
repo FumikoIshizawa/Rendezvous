@@ -19,7 +19,7 @@ public class SearchableMapViewController: UIViewController {
     public var searchText: String = "Search"
     public var hasSearchField: Bool = true
 
-    private lazy var mapView: SearchableMapView = {
+    internal lazy var mapView: SearchableMapView = {
         let center: CLLocationCoordinate2D = self.center
         let span: MKCoordinateSpan = self.span
         let mapView: SearchableMapView
@@ -34,6 +34,9 @@ public class SearchableMapViewController: UIViewController {
         return mapView
     }()
     private let textField: UITextField = UITextField()
+    private let activityIndicatorView: UIActivityIndicatorView
+        = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
+    private let activityIndicatorBackground: UIView = UIView()
 
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +55,18 @@ public class SearchableMapViewController: UIViewController {
         navigationItem.rightBarButtonItem = doneButton
 
         self.view.addSubview(mapView)
+
+        activityIndicatorView.center = self.view.center
+        activityIndicatorView.isHidden = true
+        activityIndicatorBackground.frame = CGRect(x: 0,
+                                                   y: 0,
+                                                   width: self.view.frame.width,
+                                                   height: self.view.frame.height)
+        activityIndicatorBackground.backgroundColor = UIColor(white: 0, alpha: 0.5)
+        activityIndicatorBackground.isHidden = true
+        self.view.addSubview(activityIndicatorBackground)
+        self.view.addSubview(activityIndicatorView)
+
     }
 
     @objc private func didTapDone(_ sender: Any) {
@@ -65,6 +80,18 @@ public class SearchableMapViewController: UIViewController {
         textField.resignFirstResponder()
     }
 
+    fileprivate func showActivityIndicator() {
+        activityIndicatorBackground.isHidden = false
+        activityIndicatorView.isHidden = false
+        activityIndicatorView.startAnimating()
+    }
+
+    fileprivate func hideActivityIndicator() {
+        activityIndicatorBackground.isHidden = true
+        activityIndicatorView.isHidden = true
+        activityIndicatorView.stopAnimating()
+    }
+
 }
 
 
@@ -72,6 +99,7 @@ public class SearchableMapViewController: UIViewController {
 extension SearchableMapViewController: UITextFieldDelegate {
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        self.showActivityIndicator()
 
         let request: MKLocalSearchRequest = MKLocalSearchRequest()
         request.naturalLanguageQuery = textField.text
@@ -83,8 +111,10 @@ extension SearchableMapViewController: UITextFieldDelegate {
             guard let result = response?.mapItems.first else { return }
             guard let location = result.placemark.location else { return }
             self?.mapView.centerLocation = location
+            self?.hideActivityIndicator()
         }
         return true
     }
+
 }
 

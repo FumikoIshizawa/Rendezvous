@@ -13,7 +13,7 @@ import MapKit
 
 class SearchTextBox: UIView {
 
-    private var textFieldCompletion: ((String) -> Void)?
+    internal var textFieldCompletion: ((String) -> Void)?
 
     init(frame: CGRect, searchText: String, completion: ((String) -> Void)?) {
         super.init(frame: frame)
@@ -22,7 +22,7 @@ class SearchTextBox: UIView {
 
         // View for textField
         self.backgroundColor = UIColor.white
-        self.layer.borderColor = UIColor.groupTableViewBackground.cgColor
+        self.layer.borderColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 1.0).cgColor
         self.layer.borderWidth = 1.0
 
         // Search textField

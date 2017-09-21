@@ -32,8 +32,8 @@ class CircleView: UIView, Pin {
         self.center = center
 
         // TODO: Configure
-        self.backgroundColor = #colorLiteral(red: 0.9137254902, green: 0.1960784314, blue: 0.02745098039, alpha: 0.5)
-        self.layer.borderColor = #colorLiteral(red: 0.9137254902, green: 0.1960784314, blue: 0.02745098039, alpha: 1)
+        self.backgroundColor = UIColor(red: 233/255, green: 50/255, blue: 7/255, alpha: 0.5)
+        self.layer.borderColor = UIColor(red: 233/255, green: 50/255, blue: 7/255, alpha: 1.0).cgColor
         self.layer.borderWidth = 2.0
     }
 
