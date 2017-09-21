@@ -19,12 +19,13 @@ public class PreviewableMapView: MKMapView {
         case none
     }
 
-    var pinLocation: CGPoint = CGPoint(x: 0.0, y: 0.0) {
+    public var pinPoint: CGPoint = CGPoint(x: 0.0, y: 0.0) {
         didSet {
-            pin?.location = pinLocation
+            pin?.location = pinPoint
         }
     }
-    var pin: Pin?
+    private var pin: Pin?
+    private var span: MKCoordinateSpan = MKCoordinateSpanMake(0.01, 0.01)
 
     public init(frame: CGRect,
                 centerCoordinate: CLLocationCoordinate2D,
@@ -34,9 +35,8 @@ public class PreviewableMapView: MKMapView {
 
         self.isScrollEnabled = false
         self.isPitchEnabled = false
-
-        let region = MKCoordinateRegionMake(centerCoordinate, span)
-        self.region = region
+        self.span = span
+        self.moveToLocation(coordinate: centerCoordinate)
 
         switch pinType {
         case .circle(let radius):
@@ -48,6 +48,15 @@ public class PreviewableMapView: MKMapView {
         default:
             break
         }
+    }
+
+    public func moveToLocation(coordinate: CLLocationCoordinate2D) {
+        self.moveToLocation(coordinate: coordinate, span: self.span)
+    }
+
+    public func moveToLocation(coordinate: CLLocationCoordinate2D, span: MKCoordinateSpan) {
+        let region = MKCoordinateRegionMake(coordinate, span)
+        self.setRegion(region, animated: true)
     }
 
     required public init?(coder aDecoder: NSCoder) {

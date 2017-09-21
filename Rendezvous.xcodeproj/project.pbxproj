@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA7490DA1F7359750066671D /* SearchTextBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7490D91F7359750066671D /* SearchTextBox.swift */; };
+		FA7490DC1F73857C0066671D /* SearchableMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7490DB1F73857C0066671D /* SearchableMapViewController.swift */; };
 		FA98B9E91F72385A00671D7E /* Rendezvous.h in Headers */ = {isa = PBXBuildFile; fileRef = FA98B9E71F72385A00671D7E /* Rendezvous.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FA98BA441F723A6A00671D7E /* SearchableMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA98BA431F723A6A00671D7E /* SearchableMapView.swift */; };
 		FA98BA471F723A9F00671D7E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA98BA461F723A9F00671D7E /* MapKit.framework */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA7490D91F7359750066671D /* SearchTextBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextBox.swift; sourceTree = "<group>"; };
+		FA7490DB1F73857C0066671D /* SearchableMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchableMapViewController.swift; sourceTree = "<group>"; };
 		FA98B9E41F72385A00671D7E /* Rendezvous.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Rendezvous.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA98B9E71F72385A00671D7E /* Rendezvous.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rendezvous.h; sourceTree = "<group>"; };
 		FA98B9E81F72385A00671D7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,10 +64,12 @@
 			children = (
 				FA98B9E81F72385A00671D7E /* Info.plist */,
 				FA98B9E71F72385A00671D7E /* Rendezvous.h */,
-				FA98BA431F723A6A00671D7E /* SearchableMapView.swift */,
-				FA98BA481F723C3F00671D7E /* PreviewableMapView.swift */,
 				FA98BA501F726B0A00671D7E /* CircleView.swift */,
 				FA98BA521F72707500671D7E /* Pin.swift */,
+				FA98BA481F723C3F00671D7E /* PreviewableMapView.swift */,
+				FA98BA431F723A6A00671D7E /* SearchableMapView.swift */,
+				FA7490DB1F73857C0066671D /* SearchableMapViewController.swift */,
+				FA7490D91F7359750066671D /* SearchTextBox.swift */,
 			);
 			path = Rendezvous;
 			sourceTree = "<group>";
@@ -157,9 +163,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA98BA511F726B0A00671D7E /* CircleView.swift in Sources */,
+				FA7490DC1F73857C0066671D /* SearchableMapViewController.swift in Sources */,
 				FA98BA491F723C3F00671D7E /* PreviewableMapView.swift in Sources */,
 				FA98BA441F723A6A00671D7E /* SearchableMapView.swift in Sources */,
 				FA98BA531F72707500671D7E /* Pin.swift in Sources */,
+				FA7490DA1F7359750066671D /* SearchTextBox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

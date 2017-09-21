@@ -14,8 +14,6 @@
 		FA98BA2B1F723A1D00671D7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA98BA291F723A1D00671D7E /* LaunchScreen.storyboard */; };
 		FA98BA361F723A1D00671D7E /* ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA98BA351F723A1D00671D7E /* ExampleTests.swift */; };
 		FA98BA411F723A3900671D7E /* Rendezvous.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA98BA421F723A3900671D7E /* Rendezvous.framework */; };
-		FA98BA4C1F7240CF00671D7E /* SearchLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA98BA4A1F7240CF00671D7E /* SearchLocationViewController.swift */; };
-		FA98BA4D1F7240CF00671D7E /* SearchLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA98BA4B1F7240CF00671D7E /* SearchLocationViewController.xib */; };
 		FA98BA4F1F72446D00671D7E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA98BA4E1F72446D00671D7E /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,8 +39,6 @@
 		FA98BA351F723A1D00671D7E /* ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTests.swift; sourceTree = "<group>"; };
 		FA98BA371F723A1D00671D7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA98BA421F723A3900671D7E /* Rendezvous.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Rendezvous.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA98BA4A1F7240CF00671D7E /* SearchLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocationViewController.swift; sourceTree = "<group>"; };
-		FA98BA4B1F7240CF00671D7E /* SearchLocationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchLocationViewController.xib; sourceTree = "<group>"; };
 		FA98BA4E1F72446D00671D7E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -93,8 +89,6 @@
 				FA98BA2C1F723A1D00671D7E /* Info.plist */,
 				FA98BA291F723A1D00671D7E /* LaunchScreen.storyboard */,
 				FA98BA241F723A1D00671D7E /* Main.storyboard */,
-				FA98BA4A1F7240CF00671D7E /* SearchLocationViewController.swift */,
-				FA98BA4B1F7240CF00671D7E /* SearchLocationViewController.xib */,
 				FA98BA221F723A1D00671D7E /* ViewController.swift */,
 			);
 			path = Example;
@@ -203,7 +197,6 @@
 			files = (
 				FA98BA2B1F723A1D00671D7E /* LaunchScreen.storyboard in Resources */,
 				FA98BA281F723A1D00671D7E /* Assets.xcassets in Resources */,
-				FA98BA4D1F7240CF00671D7E /* SearchLocationViewController.xib in Resources */,
 				FA98BA261F723A1D00671D7E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,7 +215,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA98BA4C1F7240CF00671D7E /* SearchLocationViewController.swift in Sources */,
 				FA98BA231F723A1D00671D7E /* ViewController.swift in Sources */,
 				FA98BA211F723A1D00671D7E /* AppDelegate.swift in Sources */,
 			);
