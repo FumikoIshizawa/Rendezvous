@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA2E03551F75101D00DEDD5B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2E03541F75101D00DEDD5B /* CoreLocation.framework */; };
 		FA7490DA1F7359750066671D /* SearchTextBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7490D91F7359750066671D /* SearchTextBox.swift */; };
 		FA7490DC1F73857C0066671D /* SearchableMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7490DB1F73857C0066671D /* SearchableMapViewController.swift */; };
 		FA98B9E91F72385A00671D7E /* Rendezvous.h in Headers */ = {isa = PBXBuildFile; fileRef = FA98B9E71F72385A00671D7E /* Rendezvous.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA2E03541F75101D00DEDD5B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		FA7490D91F7359750066671D /* SearchTextBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextBox.swift; sourceTree = "<group>"; };
 		FA7490DB1F73857C0066671D /* SearchableMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchableMapViewController.swift; sourceTree = "<group>"; };
 		FA98B9E41F72385A00671D7E /* Rendezvous.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Rendezvous.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA2E03551F75101D00DEDD5B /* CoreLocation.framework in Frameworks */,
 				FA98BA471F723A9F00671D7E /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -77,6 +80,7 @@
 		FA98BA451F723A9F00671D7E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA2E03541F75101D00DEDD5B /* CoreLocation.framework */,
 				FA98BA461F723A9F00671D7E /* MapKit.framework */,
 			);
 			name = Frameworks;

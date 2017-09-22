@@ -8,11 +8,12 @@
 
 import Foundation
 
+import CoreLocation
 import MapKit
 
 public class SearchableMapViewController: UIViewController {
 
-    public var updateLocation: ((CLPlacemark) -> Void)?
+    public var updatedLocation: ((CLPlacemark) -> Void)?
     public var span: MKCoordinateSpan = MKCoordinateSpanMake(0.01, 0.01)
     public var center: CLLocationCoordinate2D = CLLocationCoordinate2DMake(35, 139)
     public var pinType: SearchableMapView.PinType = .none
@@ -37,9 +38,13 @@ public class SearchableMapViewController: UIViewController {
     private let activityIndicatorView: UIActivityIndicatorView
         = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
     private let activityIndicatorBackground: UIView = UIView()
+    fileprivate let locationManager: CLLocationManager = CLLocationManager()
 
     override public func viewDidLoad() {
         super.viewDidLoad()
+
+        locationManager.delegate = self
+        locationManager.requestLocation()
 
         if hasSearchField {
             // Search textField
@@ -71,7 +76,7 @@ public class SearchableMapViewController: UIViewController {
 
     @objc private func didTapDone(_ sender: Any) {
         mapView.fetchPlacemark { [weak self] (placemark) in
-            self?.updateLocation?(placemark)
+            self?.updatedLocation?(placemark)
         }
         self.dismiss(animated: true, completion: nil)
     }
@@ -116,5 +121,21 @@ extension SearchableMapViewController: UITextFieldDelegate {
         return true
     }
 
+}
+
+
+// MARK: - CLLocationManager Delegate
+extension SearchableMapViewController: CLLocationManagerDelegate {
+
+    public func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error)
+    }
+
+    public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location: CLLocation = locations.first else {
+            return
+        }
+        self.mapView.centerLocation = location
+    }
 }
 

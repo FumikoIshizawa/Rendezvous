@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "Rendezvous"
-  s.version      = "0.1.1"
+  s.version      = "0.1.2"
   s.summary      = "Rendezvous allows you to show a simple map to share with anyone."
 
   # This description is used to generate tags and improve search results.
@@ -79,7 +79,7 @@ Rendezvous allows you to show a simple map, especially to share with anyone.
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/FumikoIshizawa/Rendezvous.git", :tag => "0.1.1" }
+  s.source       = { :git => "https://github.com/FumikoIshizawa/Rendezvous.git", :tag => s.version.to_s }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

@@ -8,11 +8,13 @@
 
 import UIKit
 
+import CoreLocation
 import Rendezvous
 import MapKit
 
 class ViewController: UIViewController {
 
+    private let locationManager: CLLocationManager = CLLocationManager()
     private lazy var preview: PreviewableMapView = {
         let center: CLLocationCoordinate2D = CLLocationCoordinate2DMake(35.64225261994919, 139.71363692266726)
         let span: MKCoordinateSpan = MKCoordinateSpanMake(0.015, 0.015)
@@ -26,8 +28,14 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.view.addSubview(self.preview)
+
+        switch CLLocationManager.authorizationStatus() {
+        case .authorizedWhenInUse:
+            break
+        default:
+            locationManager.requestWhenInUseAuthorization()
+        }
     }
 
     @IBAction func searchLocationButtonTouchUpInside(_ sender: Any) {
@@ -36,7 +44,7 @@ class ViewController: UIViewController {
             vc.center = CLLocationCoordinate2DMake(35.64225261994919, 139.71363692266726)
             vc.span = MKCoordinateSpanMake(0.01, 0.01)
             vc.pinType = .circle(100)
-            vc.updateLocation = { [weak self] placemark in
+            vc.updatedLocation = { [weak self] placemark in
                 guard let location: CLLocation = placemark.location else { return }
                 self?.preview.moveToLocation(coordinate: location.coordinate)
             }
@@ -46,4 +54,3 @@ class ViewController: UIViewController {
     }
 
 }
-

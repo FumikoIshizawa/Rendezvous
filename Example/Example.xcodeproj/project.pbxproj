@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA2E03501F750A4D00DEDD5B /* Rendezvous.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA98BA421F723A3900671D7E /* Rendezvous.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FA2E03531F750DBE00DEDD5B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2E03521F750DBE00DEDD5B /* CoreLocation.framework */; };
 		FA98BA211F723A1D00671D7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA98BA201F723A1D00671D7E /* AppDelegate.swift */; };
 		FA98BA231F723A1D00671D7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA98BA221F723A1D00671D7E /* ViewController.swift */; };
 		FA98BA261F723A1D00671D7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA98BA241F723A1D00671D7E /* Main.storyboard */; };
@@ -27,7 +29,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		FA2E03511F750A4D00DEDD5B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FA2E03501F750A4D00DEDD5B /* Rendezvous.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		FA2E03521F750DBE00DEDD5B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		FA98BA1D1F723A1D00671D7E /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA98BA201F723A1D00671D7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA98BA221F723A1D00671D7E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA2E03531F750DBE00DEDD5B /* CoreLocation.framework in Frameworks */,
 				FA98BA4F1F72446D00671D7E /* MapKit.framework in Frameworks */,
 				FA98BA411F723A3900671D7E /* Rendezvous.framework in Frameworks */,
 			);
@@ -106,6 +124,7 @@
 		FA98BA401F723A3900671D7E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA2E03521F750DBE00DEDD5B /* CoreLocation.framework */,
 				FA98BA4E1F72446D00671D7E /* MapKit.framework */,
 				FA98BA421F723A3900671D7E /* Rendezvous.framework */,
 			);
@@ -122,6 +141,7 @@
 				FA98BA191F723A1D00671D7E /* Sources */,
 				FA98BA1A1F723A1D00671D7E /* Frameworks */,
 				FA98BA1B1F723A1D00671D7E /* Resources */,
+				FA2E03511F750A4D00DEDD5B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

@@ -35,6 +35,8 @@ public class PreviewableMapView: MKMapView {
 
         self.isScrollEnabled = false
         self.isPitchEnabled = false
+        self.isZoomEnabled = false
+        self.isRotateEnabled = false
         self.span = span
         self.moveToLocation(coordinate: centerCoordinate)
 

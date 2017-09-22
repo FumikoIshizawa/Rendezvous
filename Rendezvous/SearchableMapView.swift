@@ -52,6 +52,8 @@ public class SearchableMapView: MKMapView {
         self.region = region
         self.span = span
 
+        self.showsUserLocation = true
+
         switch pinType {
         case .circle(let radius):
             self.pin = CircleView(
