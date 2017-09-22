@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "Rendezvous"
-  s.version      = "0.0.1"
+  s.version      = "0.1.1"
   s.summary      = "Rendezvous allows you to show a simple map to share with anyone."
 
   # This description is used to generate tags and improve search results.
